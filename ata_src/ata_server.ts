@@ -70,7 +70,15 @@ function doDomainCheck(email: string) {
 }
 
 let domainCheck: express.RequestHandler = (req, res, next) => {
-  let email = req.body[currentSettings.emailFieldName];
+  let email: string;
+  try {
+    email = req.body[currentSettings.emailFieldName];
+  } catch (err) {
+    res.status(403).json({
+      error: "Email not found in request body."
+    });
+    return;
+  }
   if (isNullOrUndefined(email)) {
     res.status(403).json({
       error: "Email not found in request body."
@@ -99,7 +107,7 @@ let domainCheck: express.RequestHandler = (req, res, next) => {
 }
 
 let authUser = (req: Request, res: Response) => {
-
+  res.send("test");
 }
 
 export function startServer(port: number, settings?: ATA.Settings) {
