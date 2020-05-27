@@ -1,0 +1,29 @@
+{
+  "name": "around_the_apple",
+  "version": "1.0.0",
+  "description": "3rd party sign-in template.",
+  "main": "main.ts",
+  "scripts": {
+    "test": "test",
+    "start": "ts-node main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBoss925/around_the_apple.git"
+  },
+  "keywords": [
+    "around",
+    "the",
+    "apple"
+  ],
+  "author": "JBoss925",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JBoss925/around_the_apple/issues"
+  },
+  "homepage": "https://github.com/JBoss925/around_the_apple#readme",
+  "dependencies": {
+    "@types/node": "^14.0.5",
+    "ts-node": "^8.10.1"
+  }
+}
